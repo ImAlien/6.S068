@@ -20,8 +20,8 @@ int main(){
     //子进程
     if(fork() == 0){
         //关掉不用的p1[1]、p2[0]
-        close(p1[1]);
-        close(p2[0]);
+       // close(p1[1]);
+       // close(p2[0]);
 		//子进程从pipe1的读端，读取字符数组
 		if(read(p1[0], buffer, length) != length){
 			printf("a--->b read error!");
